@@ -39,9 +39,9 @@ lighttpdConfig=/etc/lighttpd/lighttpd.conf
 coltable=/opt/pihole/COL_TABLE
 
 # We store several other folders and
-webInterfaceGitUrl="https://github.com/pi-hole/AdminLTE.git"
+webInterfaceGitUrl="https://github.com/gethoneybox/AdminLTE.git"
 webInterfaceDir="/var/www/html/admin"
-piholeGitUrl="https://github.com/pi-hole/pi-hole.git"
+piholeGitUrl="https://github.com/bryantmaroney/noad.git"
 PI_HOLE_LOCAL_REPO="/etc/.pihole"
 # These are the names of pi-holes files, stored in an array
 PI_HOLE_FILES=(chronometer list piholeDebug piholeLogFlush setupLCD update version gravity uninstall webpage)
@@ -2325,7 +2325,7 @@ main() {
         if command -v sudo &> /dev/null; then
             echo -e "${OVER}  ${TICK} Sudo utility check"
             # Download the install script and run it with admin rights
-            exec curl -sSL https://raw.githubusercontent.com/pi-hole/pi-hole/master/automated%20install/basic-install.sh | sudo bash "$@"
+            exec curl -sSL https://raw.githubusercontent.com/bryantmaroney/noad/master/automated%20install/basic-install.sh | sudo bash "$@"
             exit $?
         # Otherwise,
         else
